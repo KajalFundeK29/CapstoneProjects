@@ -26,8 +26,8 @@ public class HomePage {
 	
 	//data member(locator)
 	
-			@FindBy (xpath ="//span[@id='signin']")
-			private WebElement signInbtn;
+		@FindBy (xpath ="//span[@id='signin']")
+		private WebElement signInbtn;
 			
 	//method(functionality to test)
 	public String getAppUrl()

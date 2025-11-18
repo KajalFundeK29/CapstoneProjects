@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Bstack.testCase.HomePageTest">
+      <class name="com.Bstack.testCase.ProductPageTest">
         <methods>
+          <include name="AddToCartTest"/>
           <include name="afterTest"/>
           <include name="setup"/>
-          <include name="linkStatusTest"/>
         </methods>
-      </class> <!-- com.Bstack.testCase.HomePageTest -->
+      </class> <!-- com.Bstack.testCase.ProductPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

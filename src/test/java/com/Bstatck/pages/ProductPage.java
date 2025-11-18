@@ -51,8 +51,7 @@ public class ProductPage {
 				break;
 			}
 		}
-		//add to cart
-		addToCartBtn.click();
+		
 		System.out.println("Product "+pName+" is selected");
 	}
 	
@@ -60,5 +59,7 @@ public class ProductPage {
 	{
 		return driver.getCurrentUrl();
 	}
+	
+
 	
 }
