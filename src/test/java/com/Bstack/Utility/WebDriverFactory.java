@@ -29,7 +29,7 @@ public class WebDriverFactory {
 	                throw new IllegalArgumentException("Invalid browser: " + browser);
 	        }
 
-	        driver.manage().window().maximize();
+	       
 	        return driver;
 	    }
 	}

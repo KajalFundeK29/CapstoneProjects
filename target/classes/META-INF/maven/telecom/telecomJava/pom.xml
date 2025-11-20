@@ -43,6 +43,11 @@
             <version>5.7.4</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.0.8</version>
+		</dependency>
 
     
 
@@ -71,7 +76,7 @@
 				<version>3.5.4</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>hrm.xml</suiteXmlFile>
+						<suiteXmlFile>bstackng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

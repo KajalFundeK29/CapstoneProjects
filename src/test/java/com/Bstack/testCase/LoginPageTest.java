@@ -1,26 +1,31 @@
 package com.Bstack.testCase;
 
-import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+import com.Bstack.BaseClass.BaseTest;
 import org.testng.annotations.*;
 
 
 public class LoginPageTest extends BaseTest {
-	public WebDriver driver;
 	
-	@BeforeClass
+	@BeforeMethod
 	public void setupLoginPage() {
 		hp.getLinkStatus();
 	}
 	
-  @Test
-  public void loginPgTitleTest() {
-	  String title= lp.loginpageTitle();
-	  System.out.println("Login Page Title is: "+title);
-	  
+  
+//Positive Test Case
+  @Test(priority=0)
+  public void loginTest() {
+	  System.out.println("Login Page Title is: "+lp.loginpageTitle());
+	  String url= lp.verifyvalidLogin();
+	  System.out.println("After Login Navigated to URL: "+url);
+	  lp.logoutFromApp();
   }
   
-  public void loginTest() {
-	  String url= lp.clickLogin("demouser", "testingisfun99");
-	  System.out.println("After Login Navigated to URL: "+url);
+//Negative Test Case
+  @Test
+  public void emptyLoginTest() {
+
+	  System.out.println("Error Message for empty Login test is:"+ lp.verifyemptyLogin());
   }
 }

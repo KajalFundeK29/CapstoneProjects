@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Bstack.testCase.ProductPageTest">
+      <class name="com.Bstack.testCase.AddToCartTests">
         <methods>
-          <include name="AddToCartTest"/>
-          <include name="afterTest"/>
+          <include name="setupLoginPage"/>
+          <include name="removeItemFromCartTest"/>
+          <include name="addMoreItemsTest"/>
           <include name="setup"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.Bstack.testCase.ProductPageTest -->
+      </class> <!-- com.Bstack.testCase.AddToCartTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
