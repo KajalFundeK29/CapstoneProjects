@@ -1,10 +1,8 @@
 package com.Bstack.testCase;
 
 import java.util.ArrayList;
-
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.Bstack.BaseClass.BaseTest;
 import com.Bstack.Utility.Util;
 
@@ -22,7 +20,6 @@ public class AddToCartTests extends BaseTest {
 		productNames.add("iPhone 12");
 		productNames.add("Pixel 4");
 	}
-	
 	
 	
   @Test

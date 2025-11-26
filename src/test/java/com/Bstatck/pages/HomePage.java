@@ -15,7 +15,6 @@ public class HomePage {
 	//encapsulation(private data, public method)
 	private WebDriver driver;
 	
-	
 	//initialize driver
 	public HomePage(WebDriver driver)// this driver is from Base Class
 	{
@@ -41,7 +40,6 @@ public class HomePage {
 		Assert.assertEquals(title, "StackDemo");
 		System.out.println("Title verified");
 	}
-	
 	
 	public String getLinkStatus()
 	{

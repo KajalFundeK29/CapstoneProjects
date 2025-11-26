@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>telecom</groupId>
-  <artifactId>telecomJava</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-        <!-- ✅ Selenium WebDriver -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>telecom</groupId>
+    <artifactId>telecomJava</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+
+        <!-- ✅ Selenium -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -29,6 +41,7 @@
             <version>7.11.0</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
@@ -36,51 +49,57 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- ✅ Optional: Cucumber Reporting -->
+        <!-- ✅ Extent Reports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.0.8</version>
+        </dependency>
+
+        <!-- ✅ Cucumber Reporting -->
         <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-reporting</artifactId>
             <version>5.7.4</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-			<groupId>com.aventstack</groupId>
-			<artifactId>extentreports</artifactId>
-			<version>5.0.8</version>
-		</dependency>
 
-    
+        <!-- ✅ ✅ Lombok (Java 17 Compatible – REQUIRED) -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.34</version>
+            <scope>provided</scope>
+        </dependency>
 
     </dependencies>
 
-    <!-- ✅ Build Plugins -->
     <build>
         <plugins>
 
-            <!-- Compiler Plugin -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.14.1</version>
-				<configuration>
-					<verbose>true</verbose>
-					<fork>true</fork>
-					<executable>${JAVA_HOME}/bin/javac</executable>
-					<compilerVersion>17</compilerVersion>
-				</configuration>
-			</plugin>
+            <!-- ✅ Compiler Plugin (Fixed for Java 17) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.14.1</version>
+                <configuration>
+                    <release>17</release>
+                </configuration>
+            </plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.5.4</version>
-				<configuration>
-					<suiteXmlFiles>
-						<suiteXmlFile>bstackng.xml</suiteXmlFile>
-					</suiteXmlFiles>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+            <!-- ✅ Surefire Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.4</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>bstackng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
 
 </project>
