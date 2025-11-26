@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="testListener.ExtentITestNGListeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.Module02Admin.TestCase.AdminTestCases">
+        <methods>
+          <include name="tearDown"/>
+          <include name="dashboardMenuTest"/>
+          <include name="setup"/>
+          <include name="userStatusTest"/>
+          <include name="searchUserByRoleTest"/>
+          <include name="setupAdmin"/>
+          <include name="searchByUsername"/>
+        </methods>
+      </class> <!-- com.Module02Admin.TestCase.AdminTestCases -->
+      <class name="com.Module02Admin.TestCase.LoginTestCase">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="verifyValidLoginTest"/>
+        </methods>
+      </class> <!-- com.Module02Admin.TestCase.LoginTestCase -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
